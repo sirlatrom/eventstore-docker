@@ -1,7 +1,7 @@
 FROM busybox@sha256:16a2a52884c2a9481ed267c2d46483eac7693b813a63132368ab098a71303f8a
 MAINTAINER Sune Keller <sune.keller@gmail.com>
 ENV EVENTSTORE_VERSION=3.4.0
-RUN mkdir /opt && wget -O- http://download.geteventstore.com/binaries/EventStore-OSS-Ubuntu-v$EVENTSTORE_VERSION.tar.gz | tar xz -C /opt
+RUN mkdir /opt && wget -O- http://download.geteventstore.com/binaries/EventStore-OSS-Ubuntu-14.04-v${EVENTSTORE_VERSION}.tar.gz | tar xz -C /opt
 EXPOSE 2112/tcp
 EXPOSE 1113/tcp
 VOLUME [/data/db]
